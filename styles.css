@@ -1,13 +1,79 @@
-/* styles.css */
-
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+}
+/* Estilo para centrar la sección de bienvenida */
+#inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50vh; /* Asegura que la sección ocupe al menos la mitad de la pantalla */
+    background-image: url('img/familia.webp'); /* Ruta a la imagen */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    color: rgb(17, 16, 16); /* Cambia el color del texto para que contraste con el fondo */
+    padding: 20px;
+}
+/* Contenedor de productos */
+.products {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los productos se ajusten si hay más de uno por fila */
+    justify-content: center; /* Centra los productos horizontalmente */
+    align-items: center; /* Centra los productos verticalmente */
+    gap: 20px; /* Añade un espacio uniforme entre los productos */
+    margin: 20px 0;
 }
 
+/* Estilo para cada producto individual */
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center; /* Centra el texto dentro de cada tarjeta */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Establece un ancho uniforme para cada producto */
+}
+
+.product img {
+    width: 100px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-around; /* Asegura separación uniforme */
+    margin: 20px 0;
+    gap: 15px; /* Añade un espacio de 15px entre los botones */
+}
+
+.category {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 150px;
+    transition: background-color 0.3s ease;
+}
+
+.category:hover {
+    background-color: #0056b3;
+}
+
+
+/* Header styling */
 header {
     background-color: #333;
     color: white;
@@ -15,6 +81,7 @@ header {
     text-align: center;
 }
 
+/* Logo and navigation */
 header .logo h1 {
     margin: 0;
 }
@@ -22,11 +89,9 @@ header .logo h1 {
 nav ul {
     list-style: none;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 nav ul li a {
@@ -34,10 +99,13 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Main content styling */
 main {
+    flex: 1; /* Permite que el contenido principal se expanda */
     padding: 20px;
 }
 
+/* Categories section */
 .categories {
     display: flex;
     justify-content: space-around;
@@ -58,36 +126,13 @@ main {
     background-color: #0056b3;
 }
 
-.products {
-    margin: 20px 0;
-}
-
-.products h2 {
-    text-align: center;
-    color: #333;
-}
-
-.product {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.product img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
+/* Footer styling */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
+    margin-top: 20px; /* Añade separación vertical entre el contenido y el footer */
     position: relative;
     bottom: 0;
     width: 100%;
